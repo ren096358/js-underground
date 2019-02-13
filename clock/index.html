@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2F - clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="app">
+        <img class="clock" src="image/clock-bg.png">
+        <img id="hour" class="hand hour" src="image/hour-hand.png" :style="{ transform: 'translate(0, -50%) rotate(' + degree.hour + 'deg)' }">
+        <img id="minute" class="hand minute" src="image/minute-hand.png" :style="{ transform: 'translate(-50%, -100%) rotate(' + degree.minute + 'deg)' }">
+        <img id="second" class="hand second" src="image/second-hand.png" :style="{ transform: 'translate(-50%, 0) rotate(' + degree.second + 'deg)' }">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
