@@ -12,9 +12,9 @@
 <body>
 	<div id="app" class="calculator">
 		<div class="header">
-			<div class="countProcess">{{ processToString }}</div>
-			<div class="currentNumber" v-if="!counting">{{ formatTextNumber }}</div>
-			<div class="resultNumber" v-else>{{ formatResult }}</div>
+			<div class="countProcess ">{{ processToString }}</div>
+			<div class="currentNumber " v-if="!counting">{{ formatTextNumber }}</div>
+			<div class="resultNumber " v-else>{{ formatResult }}</div>
 		</div>
 		<div class="body" @click="concatNumber">
 			<div>7</div>

@@ -29,17 +29,33 @@ body {
 }
 
 .countProcess {
-    height: 19px;
+    min-height: 19px;
     font-size: 16px;
     color: #00C4FF;
+    overflow: scroll;
+    white-space: nowrap;
+}
+
+.countProcess::-webkit-scrollbar {
+    display: none;
 }
 
 .currentNumber {
     font-size: 56px;
+    overflow: scroll;
+}
+
+.currentNumber::-webkit-scrollbar {
+    display: none;
 }
 
 .resultNumber {
     font-size: 56px;
+    overflow: scroll;
+}
+
+.resultNumber::-webkit-scrollbar {
+    display: none;
 }
 
 .body {

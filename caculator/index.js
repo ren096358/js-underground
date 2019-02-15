@@ -8,7 +8,11 @@ let vm = new Vue({
 	},
 	computed: {
 		formatTextNumber() {
-			return this.textNumber.toLocaleString('en')
+			if (!this.textNumber.includes('.')) {
+				return this.textNumber.replace(/(\d{1,3})(?=(\d{3})+$)/g, "$1,")
+			} else {
+				return this.textNumber.replace(/(\d{1,3})(?=(\d{3})+\.)/g, "$1,");
+			}
 		},
 		textNumberToNumber() {
 			return Number(this.textNumber)
@@ -26,7 +30,11 @@ let vm = new Vue({
 			return str
 		},
 		formatResult() {
-			return this.result.toLocaleString('en')
+			if (this.result % 1 === 0) {
+				return (this.result.toString()).replace(/(\d{1,3})(?=(\d{3})+$)/g, "$1,")
+			} else {
+				return (this.result.toString()).replace(/(\d{1,3})(?=(\d{3})+\.)/g, "$1,");
+			}
 		}
 	},
 	methods: {
@@ -112,7 +120,7 @@ let vm = new Vue({
 							self.result /= obj.number
 							break
 						default:
-							console.loge('無效的運算符號')
+							console.log('無效的運算符號')
 							break
 					}
 				}
