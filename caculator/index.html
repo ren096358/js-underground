@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>3F - caculator</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div id="app" class="calculator">
+		<div class="header">
+			<div class="countProcess">{{ processToString }}</div>
+			<div class="currentNumber" v-if="!counting">{{ formatTextNumber }}</div>
+			<div class="resultNumber" v-else>{{ formatResult }}</div>
+		</div>
+		<div class="body" @click="concatNumber">
+			<div>7</div>
+			<div>8</div>
+			<div>9</div>
+			<div class="countSymbol" @click="addToProcess('÷')">÷</div>
+			<div>4</div>
+			<div>5</div>
+			<div>6</div>
+			<div class="countSymbol" @click="addToProcess('×')">×</div>
+			<div>1</div>
+			<div>2</div>
+			<div>3</div>
+			<div class="countSymbol" @click="addToProcess('+')">+</div>
+			<div>0</div>
+			<div>00</div>
+			<div>.</div>
+			<div class="countSymbol" @click="addToProcess('-')">-</div>
+			<div class="deleteSymbol" @click="resetData">AC</div>
+			<div class="deleteSymbol" @click="deleteLastNumber">⌫</div>
+			<div id="resultSymbol" class="countSymbol" @click="finalResult">
+				<div></div>
+				<div>=</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.22/vue.js"></script>
+	<script src="index.js"></script>
+</body>
+
+</html>

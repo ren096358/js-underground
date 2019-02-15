@@ -1,0 +1,92 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E8E8E8;
+}
+
+.calculator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: 525px;
+    background-color: #062145;
+    border-radius: 20px 20px 20px 20px;
+    color: #FFFFFF;
+}
+
+.header {
+    height: 109px;
+    background-color: #041936;
+    border-radius: 20px 20px 0 0;
+    text-align: right;
+    padding: 16px 16px 8px 16px;
+}
+
+.countProcess {
+    height: 19px;
+    font-size: 16px;
+    color: #00C4FF;
+}
+
+.currentNumber {
+    font-size: 56px;
+}
+
+.resultNumber {
+    font-size: 56px;
+}
+
+.body {
+    height: 416px;
+    padding: 8px;
+    background-color: #062145;
+    border-radius: 0 0 20px 20px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.body>div {
+    width: 72px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    border-radius: 16px 16px 16px 16px;
+}
+
+.body>div:hover {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+
+
+.countSymbol {
+    background-color: #041936;
+}
+
+#resultSymbol {
+    background-color: #6C00FF;
+    width: 155px;
+    background: linear-gradient(to right, #00C4FF, #6C00FF);
+}
+
+#resultSymbol>div {
+    display: flex;
+    flex: 0 0 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.deleteSymbol {
+    color: #00C4FF;
+}
